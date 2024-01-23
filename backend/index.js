@@ -3,6 +3,7 @@ import express from "express";
 const app=express();
 const port=8001;
 app.use(express.json());
+
 //registered companies
 const companies = [
     { company_id: 1, company_name: 'ABC Corporation', industry: 'Technology', location: 'San Francisco, CA', size: 'Large', website: 'https://www.abccorp.com' },

@@ -1,0 +1,23 @@
+body{
+    font-size: 10px;
+    margin: 0px;
+}
+
+.Navbar{
+    background-color:#9A639F ;
+    height: 3.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logo{
+    height: 3.5rem;
+    width: 4.2rem;
+}
+.links{
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-right: 2rem;
+}

@@ -4,6 +4,9 @@ import '../css/Login.css'
 function Login(props) {
   const backgroundColor=props.color;
   const fontcolor=props.fontcolor;
+  const user=props.user;
+  const userr=user+'s';
+
   return (
     <>
     <div className='box'style={{backgroundColor}}>
@@ -12,8 +15,8 @@ function Login(props) {
             <h4>{props.tagline}</h4>
         </div>
         <div className='inner2'>
-            <NavLink className="btn-login" style={{background:fontcolor, color:backgroundColor}} to="/">Login</NavLink>
-            <p style={{color:fontcolor}}>Didn't have an account?<NavLink style={{color:'blue'}}to="/">Signup</NavLink></p>
+            <NavLink className="btn-login" style={{background:fontcolor, color:backgroundColor}} to={userr}>Login</NavLink>
+            <p style={{color:fontcolor}}>Didn't have an account?<NavLink style={{color:'blue'}}to={user}>Signup</NavLink></p>
         </div>
     </div>
     </>

@@ -9,15 +9,18 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position:sticky;
 }
 .logo{
     height: 3.5rem;
     width: 4.2rem;
 }
+.boxx{
+    margin-top: 1rem;
+}
 .links{
     color: white;
     font-size: 1.2rem;
     text-decoration: none;
-    margin-top: 1rem;
     margin-right: 2rem;
 }

@@ -1,0 +1,23 @@
+.seeker-story{
+   
+    width: 20%;
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 2px 3px 3px gray;
+}
+.seeker-story img{
+    height: 10rem;
+    width: 80%;
+   
+    align-self: center;
+    margin:1rem;
+    border-radius: 15px;
+    box-shadow: 2px 3px 3px gray;
+}
+.seeker-story p{
+    font-size: 1rem;
+    width: 100%;
+    
+    text-wrap: wrap;
+}

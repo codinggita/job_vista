@@ -16,16 +16,18 @@
     
 }
 .mission img{
-    height: 90%;
     width: 30%;
+    height: auto;
     box-shadow: 2px 3px 5px gray;
     border-radius: 10px ;
     margin-left: 1rem;
 }
 .seeker-storyy{
-  
+    margin:1rem 0rem;
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 200%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }

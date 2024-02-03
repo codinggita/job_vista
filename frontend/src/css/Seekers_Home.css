@@ -1,0 +1,59 @@
+.head{
+    background-image: url("https://img.freepik.com/premium-vector/work-from-home-workspace-office-illustration_57262-27.jpg?w=900");
+    height: 60vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-position-y: center;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+.head input{
+    margin:1rem 60rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    border: none;
+    background-image: url('https://cdn-icons-png.freepik.com/256/149/149852.png?uid=R97111110&ga=GA1.1.41235642.1698865448&semt=ais');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 16rem;
+    padding: 0.2rem;
+}
+.head input::placeholder{
+    color: black;
+    padding: 1rem;
+}
+.head input:focus{
+    outline: none;
+}
+.head h2{
+    margin-top: 12rem;
+    font-size: 2rem;
+    color: whitesmoke;
+}
+.main-body{
+    border: 2px solid red;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.filters{
+    border: 1px solid green;
+    width: 20%;
+    margin: 0.5rem 1rem;
+    height: auto;
+}
+.list{
+    display: flex;
+    width: 70%;
+    height: 100%;
+    margin: 0.5rem 1rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+}

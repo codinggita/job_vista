@@ -1,23 +1,28 @@
 .seeker-story{
-   
-    width: 20%;
+    width: 25%;
     height: 20rem;
-    overflow: hidden;
     border-radius: 15px;
-    box-shadow: 2px 3px 3px gray;
+    box-shadow: 2px 3px 5px gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 1rem 1rem;
+    background-color: #be70c548;
 }
 .seeker-story img{
-    height: 10rem;
-    width: 80%;
-   
+    height: 60%;
+    width: 70%;
     align-self: center;
-    margin:1rem;
     border-radius: 15px;
-    box-shadow: 2px 3px 3px gray;
+    box-shadow: 2px 3px 5px  #be70c548;
 }
-.seeker-story p{
-    font-size: 1rem;
+.para{
     width: 100%;
-    
-    text-wrap: wrap;
+    overflow: hidden;
+    text-align: justify;
+}
+.para p{
+    font-size: 1rem;
+    text-wrap: wrap; 
+    padding: 0.4rem;
 }

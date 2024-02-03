@@ -1,0 +1,24 @@
+.contanier{
+    display: flex;
+    width: 40%;
+    height: 50vh;
+    box-shadow: 2px 3px 5px gray;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    
+}
+.clogo{
+    
+    width: 40%;
+    height: 80%;
+}
+.info{
+    
+    width: 60%;
+}
+.clogo img{
+    
+    height: 90%;
+    width: 100%;
+}

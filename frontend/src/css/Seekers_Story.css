@@ -1,20 +1,24 @@
 .seeker-story{
     width: 25%;
     height: 20rem;
-    border-radius: 15px;
+    border-radius: 0px;
     box-shadow: 2px 3px 5px gray;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin: 1rem 1rem;
-    background-color: #be70c548;
+    background-color: #ffffff;
+    transition: 1s ease-in;
+}
+.seeker-story:hover{
+    scale: 1.1;
+    box-shadow: 2px 3px 5px gray;
 }
 .seeker-story img{
     height: 60%;
     width: 70%;
     align-self: center;
     border-radius: 15px;
-    box-shadow: 2px 3px 5px  #be70c548;
 }
 .para{
     width: 100%;

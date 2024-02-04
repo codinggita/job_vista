@@ -34,9 +34,14 @@ function Aboutus() {
         <h1 style={{textAlign:"center", fontSize:'2rem', marginTop:'2rem'}}>Stories</h1>
         <div className="seeker-storyy">
         <Seeker_Story image='https://img.freepik.com/free-vector/handsome-man_1308-85984.jpg?size=626&ext=jpg&uid=R97111110&ga=GA1.1.41235642.1698865448&semt=ais' para='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, explicabo! Suscipit consectetur quas rerum, delectus perspiciatis consequatur incidunt excepturi odit!'/>
+        <Seeker_Story image='https://img.freepik.com/free-vector/handsome-man_1308-85984.jpg?size=626&ext=jpg&uid=R97111110&ga=GA1.1.41235642.1698865448&semt=ais' para='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, explicabo! Suscipit consectetur quas rerum, delectus perspiciatis consequatur incidunt excepturi odit!'/>
+        <Seeker_Story image='https://img.freepik.com/free-vector/handsome-man_1308-85984.jpg?size=626&ext=jpg&uid=R97111110&ga=GA1.1.41235642.1698865448&semt=ais' para='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, explicabo! Suscipit consectetur quas rerum, delectus perspiciatis consequatur incidunt excepturi odit!'/>
+        
         </div>
         <h1 style={{textAlign:"center", fontSize:'2rem', marginTop:'2rem'}}>Companies</h1>
         <div className="seeker-storyy">
+        <Seeker_Story image='https://i.pinimg.com/736x/2a/cf/b6/2acfb6fb41f7fcb82c3230afdecff714.jpg' para='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, explicabo! Suscipit consectetur quas rerum, delectus perspiciatis consequatur incidunt excepturi odit!'/>
+        <Seeker_Story image='https://i.pinimg.com/736x/2a/cf/b6/2acfb6fb41f7fcb82c3230afdecff714.jpg' para='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, explicabo! Suscipit consectetur quas rerum, delectus perspiciatis consequatur incidunt excepturi odit!'/>
         <Seeker_Story image='https://i.pinimg.com/736x/2a/cf/b6/2acfb6fb41f7fcb82c3230afdecff714.jpg' para='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, explicabo! Suscipit consectetur quas rerum, delectus perspiciatis consequatur incidunt excepturi odit!'/>
         </div>
       </div>

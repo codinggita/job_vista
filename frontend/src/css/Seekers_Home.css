@@ -11,7 +11,8 @@
     text-align: center;
 }
 .head input{
-    margin:1rem 60rem;
+    margin: 1rem;
+    margin-left: 58rem;
     font-size: 1.5rem;
     border-radius: 20px;
     border: none;
@@ -21,6 +22,7 @@
     background-position-y: center;
     background-position-x: 16rem;
     padding: 0.2rem;
+
 }
 .head input::placeholder{
     color: black;
@@ -35,25 +37,31 @@
     color: whitesmoke;
 }
 .main-body{
-    border: 2px solid red;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .filters{
-    border: 1px solid green;
-    width: 20%;
+    
+    width:22%;
     margin: 0.5rem 1rem;
-    height: auto;
+    height:50rem;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 2px 3px 5px gray;
 }
+.filters h4{
+    font-size: 1.2rem;
+}
+
 .list{
     display: flex;
     width: 70%;
     height: 100%;
     margin: 0.5rem 1rem;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
 
 }

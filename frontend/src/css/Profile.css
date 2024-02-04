@@ -1,0 +1,68 @@
+.profile {
+    width: 30%; /* Adjust width as needed */
+    margin: 1rem auto;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+  
+  .profile label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .profile input[type="text"],
+  .profile input[type="email"],
+  .profile input[type="date"],
+  .profile select {
+    width: 80%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+  }
+    
+  .profile input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+
+.profile input[type="checkbox"],
+.profile input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px; /* Adjust spacing as needed */
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+/* Custom styling for file input */
+.profile input[type="file"] {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  width: 70%;
+}
+
+    
+  
+
+  

@@ -12,6 +12,10 @@ import Company_Login from './components/Company_Login';
 import Seekers_Login from './components/Seekers_Login';
 import Seekers_Home from './components/Seekers_Home';
 import Aboutus from './components/Aboutus';
+import Seekers_Apply from './components/Seekers_Apply';
+import Apply from './components/Apply';
+import Profile from './components/Profile';
+import Dashboard from './components/Dashboard';
 function App() {
   return (
      <>
@@ -27,7 +31,11 @@ function App() {
       <Route path='/login_main/ forcompaniess' element={<Company_Login/>}/>
       <Route path='/company_home' element={<Company_Home/>}/>
       <Route path='/seeker_home' element={<Seekers_Home/>}/>
+      <Route path='/jobapply'  element={<Apply/>}/>
+      <Route path='/profile' element={<Profile/>}/>
+      <Route path='/dashboard' element={<Dashboard/>}/>
      </Routes>
+     <Footer/>
      </>
   )
 }

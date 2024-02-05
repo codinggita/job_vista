@@ -1,41 +1,80 @@
-import React from 'react'
-import'../css/Profile.css'
+// Profile.js
+
+import React from 'react';
+import '../css/Profile.css';
+
 function Profile() {
   return (
     <>
-    <div className='profile'>
+    <div className='bodyy'>
+      <div className='profile'>
         <h1>Profile</h1>
         <form action="">
-            <label htmlFor="">FullName:</label>
-            <input type="text" name="" id="" placeholder='full name' /><br/>
-            <label htmlFor="">Email ID:</label>
-            <input type="email" name="" id="" /><br/>
-            <label htmlFor="">Phone Number</label>
-            <input type="text" name="" id="" /><br/>
-            <label htmlFor="">Gender</label>
-            <input type="radio" name="gender" id="1" />Male
-            <input type="radio" name="gender" id='2' />Female<br/>
-            <label htmlFor="">Eduction</label>
-            <select id="myDropdown">
-            <option value="option1">Btech</option>
-            <option value="option2">Bca</option>
-            <option value="option3">Bsc</option>
-            </select><br/>
-            <label htmlFor="">Date Of Graduation</label>
-            <input type="date" name="" id="" /><br/>
-            <label htmlFor="">Skills</label>
-            <input type="checkbox" name="" id="" />Mern
-            <input type="checkbox" name="" id="" />Mern
-            <input type="checkbox" name="" id="" />Mern
-            <input type="checkbox" name="" id="" />Mern<br/>
-            <label htmlFor="">Resume</label>
-            <input type="file" name="" id="" /><br/>
-            <input type="submit" value="Submit" />
-            
+          <div className="form-group">
+            <label htmlFor="fullName">Full Name:</label>
+            <input type="text" id="fullName" placeholder='Full Name' />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="email">Email ID:</label>
+            <input type="email" id="email" />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" />
+          </div>
+
+          <div className="form-group">
+            <label>Gender</label>
+            <input type="radio" name="gender" id="male" />
+            <label htmlFor="male">Male</label>
+
+            <input type="radio" name="gender" id="female" />
+            <label htmlFor="female">Female</label>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="education">Education</label>
+            <select id="education">
+              <option value="Btech">Btech</option>
+              <option value="Bca">Bca</option>
+              <option value="Bsc">Bsc</option>
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="graduationDate">Date Of Graduation</label>
+            <input type="date" id="graduationDate" />
+          </div>
+
+          <div className="form-group">
+            <label>Skills</label>
+            <input type="checkbox" id="mern" />
+            <label htmlFor="mern">MERN</label>
+
+            <input type="checkbox" id="react" />
+            <label htmlFor="react">React</label>
+
+            <input type="checkbox" id="node" />
+            <label htmlFor="node">Node.js</label>
+
+            <input type="checkbox" id="express" />
+            <label htmlFor="express">Express</label>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="resume">Resume</label>
+            <input type="file" id="resume" />
+          </div>
+
+          <input className='profile-btn' type="submit" value="Submit" />
         </form>
+      </div>
     </div>
-    </>
-  )
+    
+  </>
+  );
 }
 
-export default Profile
+export default Profile;

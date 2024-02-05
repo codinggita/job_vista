@@ -1,0 +1,76 @@
+.bodyy{
+  background-image: url('https://img.freepik.com/free-vector/circles-background-dark-tones_60389-166.jpg?w=996&t=st=1707075910~exp=1707076510~hmac=66e452e3921a793cc732eec36465f866aab0f3ecfd9a2a9e19ef7c2ebfa148d7');
+  background-repeat: repeat;
+  background-size: contain;
+  color: white;
+  margin-top: -3rem;
+  height: auto;
+}
+.contact-us-container {
+    max-width: 40%;  /* 800px in rems */
+    margin: 1rem auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 5px rgba(250, 248, 248, 0.307);
+    font-size: 1rem;
+  }
+  
+  /* Heading and description */
+  .contact-us-heading {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-us-description {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Form styling */
+  .contact-us-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .form-input,
+  .form-textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem;
+    resize: none; /* Prevent textarea resizing */
+  }
+  
+  .form-textarea {
+    height: 5rem;
+    resize:vertical;
+  }
+  
+  .form-select {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem;
+  }
+  
+  .contact-us-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  
+  /* Optional for phone and email links */

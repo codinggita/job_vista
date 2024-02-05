@@ -1,0 +1,64 @@
+/* New_Job.css */
+
+.job-form {
+    max-width: 40%;
+    margin: 1rem auto;
+    padding: 2rem;
+    box-shadow: 1px 2px 5px gray;
+    border-radius: 1rem;
+    font-size: 1rem;
+    
+  }
+  
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3125rem;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3125rem;
+    box-sizing: border-box;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  input[type="tel"] {
+    margin-top: 0.3125rem;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  button {
+    background-color: rgb(6, 6, 175);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 30%;
+  }
+  
+  /* Optional: Add some spacing or styling to improve readability */
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  /* Add more styling as per your design preferences */
+  

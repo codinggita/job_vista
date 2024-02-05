@@ -16,6 +16,8 @@ import Seekers_Apply from './components/Seekers_Apply';
 import Apply from './components/Apply';
 import Profile from './components/Profile';
 import Dashboard from './components/Dashboard';
+import New_Job from'./components/New_Job';
+import ContactUs from './components/ContactUs';
 function App() {
   return (
      <>
@@ -24,6 +26,7 @@ function App() {
 
       <Route path="/"element={<Main_Page/>}/>
       <Route path='/aboutus'element={<Aboutus/>}/>
+      <Route path='/contactus'element={<ContactUs/>}/>
       <Route path='/login_main'element={<Login_Main/>}/>
       <Route path='/login_main/ forcompanies' element={<For_Company/>}/>
       <Route path='/login_main/forseekers' element={<For_Seekers/>}/>
@@ -34,6 +37,7 @@ function App() {
       <Route path='/jobapply'  element={<Apply/>}/>
       <Route path='/profile' element={<Profile/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
+      <Route path='/company_home/newjob' element={<New_Job/>}/>
      </Routes>
      <Footer/>
      </>

@@ -36,7 +36,6 @@ function Seekers_Home() {
   return (
     <>
     <div className='head'>
-      <input type="text" name="" id="" placeholder='Search Here!' />
       <h2>"Job hunting simplified-find, apply, thrive."</h2>
     </div>
     <div className='main-body'>
@@ -57,24 +56,24 @@ function Seekers_Home() {
     <div>
       <h4>Location</h4>
     <FormGroup style={{margin:'2rem'}}>
-      <FormControlLabel control={<Checkbox defaultChecked />} label="Pune" />
-      <FormControlLabel control={<Checkbox />} label="Pune" />
-      <FormControlLabel control={<Checkbox />} label="Pune" />
+      <FormControlLabel control={<Checkbox defaultChecked />}className='color-black' label="Pune" />
+      <FormControlLabel control={<Checkbox />} className='color-black'label="Pune" />
+      <FormControlLabel control={<Checkbox />} className='color-black'label="Pune" />
     </FormGroup>
     </div>
     <div>
       <h4>Job Type</h4>
-    <FormGroup style={{margin:'2rem'}}>
-      <FormControlLabel control={<Checkbox defaultChecked />} label="Full Time" />
-      <FormControlLabel control={<Checkbox />} label="Internship" />
+    <FormGroup  style={{margin:'2rem'}}>
+      <FormControlLabel control={<Checkbox defaultChecked />} className='color-black'label="Full Time" />
+      <FormControlLabel control={<Checkbox />} className='color-black'label="Internship" />
     </FormGroup>
     </div>
     <div>
       <h4>Company</h4>
     <FormGroup style={{margin:'2rem'}}>
-      <FormControlLabel control={<Checkbox defaultChecked />} label="Microsoft" />
-      <FormControlLabel control={<Checkbox />} label="PlaySimpleGames" />
-      <FormControlLabel control={<Checkbox />} label="Google" />
+      <FormControlLabel control={<Checkbox defaultChecked />}className='color-black' label="Microsoft" />
+      <FormControlLabel control={<Checkbox />}className='color-black' label="PlaySimpleGames" />
+      <FormControlLabel control={<Checkbox />}className='color-black' label="Google" />
     </FormGroup>
     </div>
         </div>

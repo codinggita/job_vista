@@ -2,17 +2,17 @@
     width: 25%;
     height: 20rem;
     border-radius: 0px;
-    box-shadow: 2px 3px 5px gray;
+    box-shadow: 2px 3px 10px gray;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin: 1rem 1rem;
-    background-color: #ffffff;
     transition: 1s ease-in;
 }
 .seeker-story:hover{
     scale: 1.1;
     box-shadow: 2px 3px 5px gray;
+    color:#ffffff;;
 }
 .seeker-story img{
     height: 60%;

@@ -10,7 +10,7 @@ function Company_Home() {
     <div className='dash'>
     <Avatar name="Albert" size={64} round />
     <h3>username</h3>
-    <NavLink style={{textDecoration:'none',background:'rgb(25, 123, 25)',color:'white',borderRadius:'10px',padding:'0.5rem 1rem',margin:'1rem 0rem'}} to='apply'>New Job+</NavLink>
+    <NavLink style={{textDecoration:'none',background:'rgb(25, 123, 25)',color:'white',borderRadius:'10px',padding:'0.5rem 1rem',margin:'1rem 0rem'}} to='newjob'>New Job+</NavLink>
     <h4>Jobs Posted</h4>
     <ul>
         <li>open:5</li>

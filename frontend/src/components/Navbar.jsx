@@ -11,6 +11,7 @@ function Navbar() {
           <div className='boxx'>
           <NavLink className="links" to='/'>Home</NavLink>
           <NavLink className="links" to="aboutus">About us</NavLink>
+          <NavLink className="links" to="contactus">Contact us</NavLink>
           <NavLink className="links" to="profile">Profile</NavLink>
           <NavLink className="links" to="dashboard">Dashboard</NavLink>
           <NavLink className="links" to="login_main">Login</NavLink>

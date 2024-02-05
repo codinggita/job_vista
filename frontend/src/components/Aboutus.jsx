@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/Aboutus.css";
 import Seeker_Story from "./Seeker_Story";
+import image from '../images/pexels-nikita-ryumshin-7782667 (1080p).mp4'
 function Aboutus() {
   return (
     <>
@@ -26,10 +27,6 @@ function Aboutus() {
             goal is to help you attract top-tier talent and build a team that
             aligns with your vision.
           </p>
-          <img
-            src="https://img.freepik.com/free-photo/3d-render-code-testing-functional-test-usability_107791-16607.jpg?w=1060&t=st=1706852849~exp=1706853449~hmac=c732a9725982d69d759ec6efa1fd5406ed678f360fe9c21d638e022ac61e5113"
-            alt=""
-          />
         </div>
         <h1 style={{textAlign:"center", fontSize:'2rem', marginTop:'2rem'}}>Stories</h1>
         <div className="seeker-storyy">

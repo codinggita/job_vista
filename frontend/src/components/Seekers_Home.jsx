@@ -83,9 +83,8 @@ function Seekers_Home() {
         <Seekers_Lists heading='SDEI' image="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true" duration='full time' location='Pune'salary='50K' skills='MERN'/>
         <Seekers_Lists heading='SDEI' image="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true" duration='full time' location='Pune'salary='50K' skills='MERN'/>
         <Seekers_Lists heading='SDEI' image="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true" duration='full time' location='Pune'salary='50K' skills='MERN'/>
-        <Seekers_Lists heading='SDEI' image="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true" duration='full time' location='Pune'salary='50K' skills='MERN'/>
-        <Seekers_Lists heading='SDEI' image="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true" duration='full time' location='Pune'salary='50K' skills='MERN'/>
-        <Seekers_Lists heading='SDEI' image="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true" duration='full time' location='Pune'salary='50K' skills='MERN'/>
+       
+       
       </div>
     </div>
     </>

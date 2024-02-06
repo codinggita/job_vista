@@ -18,8 +18,11 @@ import Profile from './components/Profile';
 import Dashboard from './components/Dashboard';
 import New_Job from'./components/New_Job';
 import ContactUs from './components/ContactUs';
+import{useState,createContext,useContext}from'react';
+const LoginContext=createContext(null);
 function App() {
   return (
+
      <>
      <Navbar/>
      <Routes>

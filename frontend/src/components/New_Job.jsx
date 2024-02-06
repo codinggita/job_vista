@@ -31,6 +31,14 @@ function New_Job() {
         <label htmlFor="jobTitle">Job Title:</label>
         <input type="text" id="jobTitle" name="jobTitle" required />
       </div>
+      <div className="form-group">
+        <label htmlFor="jobtype">Job Type:</label>
+        <input type="text" id="jobTitle" name="jobtype" required />
+      </div>
+      <div className="form-group">
+        <label htmlFor="salary">Salary:</label>
+        <input type='text' id="jobTitle" name="salary" required />
+      </div>
 
       <div className="form-group">
         <label htmlFor="requiredSkills">Required Skills:</label>

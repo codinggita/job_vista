@@ -25,15 +25,9 @@ function Navbar() {
           <NavLink className="links" to='/'>Home</NavLink>
           <NavLink className="links" to="aboutus">About us</NavLink>
           <NavLink className="links" to="contactus">Contact us</NavLink>
-          {isLoggedIn ? (
-            <>
               <NavLink className="links" to="profile">Profile</NavLink>
               <NavLink className="links" to="dashboard">Dashboard</NavLink>
-              <button className="links" onClick={handleLogout}>Logout</button>
-            </>
-          ) : (
             <NavLink className="links" to="login_main" onClick={handleLogin}>Login</NavLink>
-          )}
         </div>
       </div>
     </>

@@ -1,9 +1,14 @@
 // Profile.js
 
-import React from 'react';
+import React, { useRef } from 'react';
 import '../css/Profile.css';
 
 function Profile() {
+  const interval=useRef();
+  function handleClick(){
+    console.log("intrerval")
+    interval.current.focus;
+  }
   return (
     <>
     <div className='bodyy'>
@@ -17,7 +22,7 @@ function Profile() {
 
           <div className="form-group">
             <label htmlFor="email">Email ID:</label>
-            <input type="email" id="email" />
+            <input ref={interval} type="email" id="email" />
           </div>
 
           <div className="form-group">
@@ -68,7 +73,7 @@ function Profile() {
             <input type="file" id="resume" />
           </div>
 
-          <input className='profile-btn' type="submit" value="Submit" />
+          <input className='profile-btn'  value="Submit" onClick={handleClick} />
         </form>
       </div>
     </div>

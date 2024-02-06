@@ -1,6 +1,6 @@
 .seeker-story{
     width: 25%;
-    height: 20rem;
+    height: 30%;
     border-radius: 0px;
     box-shadow: 2px 3px 10px gray;
     display: flex;
@@ -15,10 +15,11 @@
     color:#ffffff;;
 }
 .seeker-story img{
-    height: 60%;
+    height: 40%;
     width: 70%;
     align-self: center;
     border-radius: 15px;
+    margin-top:1rem ;
 }
 .para{
     width: 100%;
@@ -29,4 +30,16 @@
     font-size: 1rem;
     text-wrap: wrap; 
     padding: 0.4rem;
+}
+@media only screen and (max-width: 600px){
+    .seeker-story{
+        width: 60%;
+        height: 40%;
+        margin-bottom:1rem ;
+    }
+    .seeker-story img{
+      height: 12rem; 
+      margin-top: 1rem;
+    
+    }
 }

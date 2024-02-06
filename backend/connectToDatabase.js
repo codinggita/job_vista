@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const uri='mongodb+srv://varshadagar:8IDNLNyYXhSBY5Dq@cluster0.vglrv1p.mongodb.net';
+const uri='mongodb+srv://varshadagar:8IDNLNyYXhSBY5Dq@cluster0.vglrv1p.mongodb.net/jobvista';
 
 
 mongoose.connect(uri)

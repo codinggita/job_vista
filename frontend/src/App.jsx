@@ -37,7 +37,7 @@ function App() {
       <Route path='/login_main/ forcompaniess' element={<Company_Login/>}/>
       <Route path='/company_home' element={<Company_Home/>}/>
       <Route path='/seeker_home' element={<Seekers_Home/>}/>
-      <Route path='/jobapply'  element={<Apply/>}/>
+      <Route path='/seeker_home/jobapply'  element={<Seekers_Apply/>}/>
       <Route path='/profile' element={<Profile/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path='/company_home/newjob' element={<New_Job/>}/>

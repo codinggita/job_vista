@@ -1,6 +1,23 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 function Company_Dasboard(props) {
+  const[deleted,setDeleted]=useState(false);
+  const handleDelete=(jobid)=>{
+    axios.delete(`http://localhost:8001/company_home/delete/${jobid}`)
+    .then(()=>{
+      console.log('job deleted');
+      setDeleted(true);
+    })
+    .catch((error)=>{
+      console.error('error in deleting',error)
+    })
+  }
+  useEffect(()=>{
+    if(deleted){
+      window.location.reload();
+    }
+  })
   return (
    <>
    <div className='contanierr'>
@@ -13,9 +30,8 @@ function Company_Dasboard(props) {
         <p>Skills:{props.skills}</p>
     </div>
     <div className='clogoo'>
-    <img src={props.image} alt="" />
-    <h5 className='confirm' style={{backgroundColor:`${props.color}`, margin:'1rem'}}>{props.status}</h5>
-    <NavLink className='confirm' style={{backgroundColor:'red', margin:'1rem', textDecoration:'none'}}>Delete</NavLink>
+    <img style={{height:'80px', marginBottom:'1rem'}} src={props.image} alt="" />
+    <NavLink className='confirm' style={{backgroundColor:'red', textDecoration:'none'}} onClick={()=>handleDelete(props.id)}>Delete</NavLink>
     </div>
     </div>
    </>

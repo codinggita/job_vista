@@ -3,7 +3,17 @@ import Listings from './Listings'
 import Avatar from 'react-avatar'
 import { NavLink } from 'react-router-dom'
 import Company_Dasboard from './Company_Dasboard'
+import { useState,useEffect } from 'react'
+import axios from 'axios'
 function Company_Home() {
+
+  const[Jobs,setJobs]=useState([]);
+  useEffect(()=>{
+    axios.get('http://localhost:8001/company_home')
+    .then((response)=>
+      setJobs(response.data))
+    .catch((error)=>console.error('error in fetching jobs:',error));
+  },[]);
   return (
     <>
     <div className='dashboard'>
@@ -20,9 +30,19 @@ function Company_Home() {
     <h5>Listed since:2024</h5>
     </div>
     <div className='report'>
-    <Company_Dasboard image='https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true'duration='full time' location='Pune'salary='50K' skills='MERN' status='closed'color='orange'/>
-    <Company_Dasboard image='https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true'duration='full time' location='Pune'salary='50K' skills='MERN' status='closed'color='orange'/>
-        <Company_Dasboard image='https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true'duration='full time' location='Pune'salary='50K' skills='MERN' status='open'color=' rgb(8, 8, 187)'/>
+    {Jobs.map((job, index) => (
+          <Company_Dasboard
+            key={index}
+            heading={job.job_title}
+            image={job.company_logo_link}
+            duration={job.job_type}
+            location={job.location}
+            salary={job.salary}
+            skills={job.requiredskills}
+            id={job._id}
+          />
+        ))}
+
     </div>
     </div>
     

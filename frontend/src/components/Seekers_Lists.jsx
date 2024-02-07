@@ -15,7 +15,7 @@ function Seekers_Lists(props) {
         </div>
         <div className='clogo'>
         <img src={props.image} alt="" />
-        <NavLink className='apply' to={`/jobapply?someprop=${props}`}>Apply Now
+        <NavLink className='apply' to={{pathname:'jobapply',state:props}}>Apply Now
         </NavLink>
         </div>
     </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/Seekers_Home.css'
 import Seekers_Lists from './Seekers_Lists'
 import Box from '@mui/material/Box';
@@ -6,7 +6,16 @@ import Slider from '@mui/material/Slider';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import { getInitColorSchemeScript } from '@mui/material';
+import axios from 'axios';
 function Seekers_Home() {
+  const[Jobs,setJobs]=useState([]);
+  useEffect(()=>{
+    axios.get('http://localhost:8001/seeker_home')
+    .then((response)=>
+      setJobs(response.data))
+    .catch((error)=>console.error('error in fetching jobs:',error));
+  },[]);
   const marks = [
     {
       value: 0,
@@ -79,10 +88,17 @@ function Seekers_Home() {
         </div>
         </div>
       <div className='list'>
-        <Seekers_Lists heading='SDEI' image="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true" duration='full time' location='Pune'salary='50K' skills='MERN'/>
-        <Seekers_Lists heading='SDEI' image="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true" duration='full time' location='Pune'salary='50K' skills='MERN'/>
-        <Seekers_Lists heading='SDEI' image="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true" duration='full time' location='Pune'salary='50K' skills='MERN'/>
-        <Seekers_Lists heading='SDEI' image="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true" duration='full time' location='Pune'salary='50K' skills='MERN'/>
+      {Jobs.map((job, index) => (
+          <Seekers_Lists
+            key={index}
+            heading={job.job_title}
+            image={job.company_logo_link}
+            duration={job.job_type}
+            location={job.location}
+            salary={job.salary}
+            skills={job.requiredskills}
+          />
+        ))}
        
        
       </div>

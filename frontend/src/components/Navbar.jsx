@@ -2,11 +2,12 @@ import React, { createContext, useContext, useState } from 'react';
 import imagePath from '../images/job_vista-high-resolution-logo.png';
 import '../css/Navbar.css';
 import { NavLink, useNavigate } from 'react-router-dom';
+const LoginContext=createContext();
 
 function Navbar() {
-
+  const[isLoggedin,setisLoggedin]=useState(false);
   return (
-    <>
+    <LoginContext.Provider value={[isLoggedin,setisLoggedin]}>
       <div className='Navbar'>
         <NavLink to='/'>
           <img className='logo' src={imagePath} alt="Image description" />
@@ -20,7 +21,7 @@ function Navbar() {
             <NavLink className="links" to="login_main" >Login</NavLink>
         </div>
       </div>
-    </>
+    </LoginContext.Provider>
   );
 }
 

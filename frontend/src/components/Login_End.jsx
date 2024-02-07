@@ -1,7 +1,9 @@
 import React from 'react'
 import '../css/Register.css'
 import { useNavigate } from 'react-router-dom';
+//import{useState,createContext,useContext}from'react';
 function Login_End(props) {
+    //const login=useContext();
     const user=props.user;
     const eimg=props.eimg;
     const userimg=props.userimg;
@@ -20,6 +22,7 @@ function Login_End(props) {
 
   const handleClick = () => {
     // Pass the target page path (e.g., "/new-page") to `navigate`
+    //setLoggedin
     navigate(direct);
   };
 

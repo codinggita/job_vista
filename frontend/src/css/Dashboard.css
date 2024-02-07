@@ -20,7 +20,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    
 }
-.listings{
-    border:1px solid red;
+.confirm{
+    margin-left: 5rem;
+    font-size: 1.2rem;
 }

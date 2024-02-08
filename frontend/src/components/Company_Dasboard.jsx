@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import '../css/Dashboard.css'
 function Company_Dasboard(props) {
   const[deleted,setDeleted]=useState(false);
   const handleDelete=(jobid)=>{
@@ -20,7 +21,7 @@ function Company_Dasboard(props) {
   })
   return (
    <>
-   <div className='contanierr'>
+   <div className='contanierr' style={{height:'60%'}}>
     
     <div className='infoo'>
         <h3>{props.heading}</h3>
@@ -30,8 +31,9 @@ function Company_Dasboard(props) {
         <p>Skills:{props.skills}</p>
     </div>
     <div className='clogoo'>
-    <img style={{height:'80px', marginBottom:'1rem'}} src={props.image} alt="" />
+    <img style={{height:'80px',width:'60%', marginBottom:'3rem',marginLeft:'4rem'}} src={props.image} alt="" />
     <NavLink className='confirm' style={{backgroundColor:'red', textDecoration:'none'}} onClick={()=>handleDelete(props.id)}>Delete</NavLink>
+    <NavLink className='confirm' style={{backgroundColor:'red', textDecoration:'none'}} onClick={()=>handleDelete(props.id)}>Update</NavLink>
     </div>
     </div>
    </>

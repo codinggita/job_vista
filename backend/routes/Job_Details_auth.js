@@ -14,7 +14,25 @@ router.post('/newjob',async(req,res)=>{
     }
 
 });
-
+//update a job
+//put request...
+router.put('/updatejob/:id',async(req,res)=>{
+    try{
+        const id=req.params.id;
+        const Data=req.body;
+        const updateData=await Job_Details.findByIdAndUpdate(id,Data,{new:true});
+        if(updateData){
+            res.json({message:'Job Updated'});
+        }
+        else{
+            res.status(404).json({message:'Job not found'});
+        }
+    }
+        catch(error){
+            console.error(error);
+            res.status(500).json({message:'error in updating'})
+        }
+});
 
 //get the jobs posted on the seeker home page..
 //get request....
@@ -42,6 +60,35 @@ router.get('/company_home',async(req,res)=>{
         res.status.json({error:'internal server error'});
     }
 });
+
+//get details of a job using id 
+router.get('/company_home/updatejob/:jobid', async (req, res) => {
+    const jobId = req.params.jobid;
+    try{
+        const jobDesc = await Job_Details.findById(jobId);
+        return res.status(200).json(jobDesc);
+    }
+    catch(err){
+        res.status(500).json({message: "Internal server error"});
+    }
+
+    console.log(jobDesc);
+
+    //      (err, job) => {
+    //   if (err) {
+    //     console.error('Error finding job:', err);
+    //     return res.status(500).json({ error: 'Internal Server Error' });
+    //   }
+  
+    //   if (!job) {
+    //     return res.status(404).json({ error: 'Job not found' });
+    //   }
+  
+    //   // If job is found, send it as a response
+    //   res.json(job);
+//     });
+ });
+  
 
 //delete the job from a rec dashboard and database
 

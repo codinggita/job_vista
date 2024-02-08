@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 const Jobs_Details = new mongoose.Schema({
   company_name: String,
+  email_address: String,
+  phone_number: String,
   company_logo_link: String,
   job_title: String,
   location:String,

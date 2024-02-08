@@ -19,6 +19,7 @@ import Dashboard from './components/Dashboard';
 import New_Job from'./components/New_Job';
 import ContactUs from './components/ContactUs';
 import{useState,createContext,useContext}from'react';
+import Update_Job from './components/Update_Job';
 const LoginContext=createContext(null);
 function App() {
   return (
@@ -41,6 +42,8 @@ function App() {
       <Route path='/profile' element={<Profile/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path='/company_home/newjob' element={<New_Job/>}/>
+      <Route path='/company_home/updatejob/:id' element={<Update_Job/>}/>
+    
      </Routes>
      <Footer/>
      </>

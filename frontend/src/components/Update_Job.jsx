@@ -1,25 +1,40 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 import'../css/New_Job.css'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import {ToastContainer,toast}from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-function New_Job() {
-  const navigate = useNavigate();
-  const[newJob,setNewJob]=useState({
-    company_name:'',
-    email_address: '',
-    phone_number: '',
-    company_logo_link:'',
-    job_title:'',
-    salary:'',
-    location:'',
-    requiredskills:'',
-    job_type:'',
-    job_description:'',
-    about_rec:''
+function Update_Job() {
 
-  });
+    const {id} = useParams();
+    const navigate = useNavigate();
+    const[newJob,setNewJob]=useState({
+      company_name:'',
+      email_address: '',
+      phone_number: '',
+      company_logo_link:'',
+      job_title:'',
+      salary:'',
+      location:'',
+      requiredskills:'',
+      job_type:'',
+      job_description:'',
+      about_rec:''
+  
+    });
+  //to get the already stored details of the job
+  useEffect( () => {
+    axios.get(`http://localhost:8001/company_home/updatejob/${id}`).then(response=>{
+      //console.log(response.data);
+      setNewJob(response.data);
+
+
+    })
+    .catch(error=>{
+      console.error('error is fetching data',error);
+    })
+  }, []);
 
   //to update the statevalues 
   const handleChange=(e)=>{
@@ -29,9 +44,9 @@ function New_Job() {
   //on form submit
   const handleSubmit=(e)=>{
     e.preventDefault();
-    axios.post('http://localhost:8001/newjob',newJob)
+    axios.put(`http://localhost:8001/updatejob/${id}`,newJob)
     .then((response)=>{
-      toast.success("Job Posted Successfully!",{
+      toast.success("Job Updated Successfully!",{
         autoClose: 5000,
         onClose: () => navigate('/company_home')
       });
@@ -42,15 +57,15 @@ function New_Job() {
     });
   };
   return (
-   <>
+    <>
    <ToastContainer/>
    <div className='bodyy'>
    <form className="job-form" onSubmit={handleSubmit}>
       <h2>Job Posting Form</h2>
 
       <div className="form-group">
-        <label htmlFor="companyName">Comapny Name:</label>
-        <input type="text" id="companyName" name="company_name" required onChange={handleChange} value={newJob.company_name} />
+        <label htmlFor="companyname">Comapny Name:</label>
+        <input type="text" id="companyname" name="company_name" required onChange={handleChange} value={newJob.company_name} />
       </div>
 
       <div className="form-group">
@@ -60,7 +75,7 @@ function New_Job() {
 
       <div className="form-group">
         <label htmlFor="phoneNumber">Phone Number:</label>
-        <input type="tel" id="phoneNumber" name="phone_number" required onChange={handleChange} value={newJob.phone_number} /> 
+        <input type="tel" id="phoneNumber" name="phoneNumber" required onChange={handleChange} value={newJob.phone_number}/>
       </div>
 
       <div className="form-group">
@@ -99,11 +114,12 @@ function New_Job() {
         <textarea id="companyDescription" name="about_rec" required onChange={handleChange} value={newJob.about_rec}></textarea>
       </div>
 
-      <button type="submit">Post Job</button>
+      <button type="submit">Update Job</button>
     </form>
     </div>
-   </>
+      
+    </>
   )
 }
 
-export default New_Job
+export default Update_Job

@@ -33,7 +33,9 @@ function Company_Dasboard(props) {
     <div className='clogoo'>
     <img style={{height:'80px',width:'60%', marginBottom:'3rem',marginLeft:'4rem'}} src={props.image} alt="" />
     <NavLink className='confirm' style={{backgroundColor:'red', textDecoration:'none'}} onClick={()=>handleDelete(props.id)}>Delete</NavLink>
-    <NavLink className='confirm' style={{backgroundColor:'red', textDecoration:'none'}} onClick={()=>handleDelete(props.id)}>Update</NavLink>
+    <NavLink className='confirm' style={{backgroundColor:'red', textDecoration:'none'}} to={{pathname:'updatejob/' + props.id}}>Update</NavLink>
+    
+    {/* ,state:{jobid:props.id} */}
     </div>
     </div>
    </>

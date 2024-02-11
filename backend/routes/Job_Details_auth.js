@@ -57,7 +57,7 @@ router.get('/company_home',async(req,res)=>{
     }
     catch(error){
         console.log('error',error);
-        res.status.json({error:'internal server error'});
+        res.status(500).json({error:'internal server error'});
     }
 });
 

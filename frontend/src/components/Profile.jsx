@@ -1,14 +1,26 @@
-// Profile.js
-
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import '../css/Profile.css';
-
+import axios from 'axios';
+import { ToastContainer,toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 function Profile() {
-  const interval=useRef();
-  function handleClick(){
-    console.log("intrerval")
-    interval.current.focus;
-  }
+  const[newseeker,setNewSeeker]=useState({});
+  //to update values
+  const handleChange=(e)=>{
+    const{name,value}=e.target;
+    setNewSeeker({...newseeker,[name]:value});
+  };
+  //on submit
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    axios.post('http://localhost:8001/newseeker',newseeker)
+    .then((response)=>{
+      toast.success("Profile Updated!")
+    })
+    .catch((error)=>{
+      console.log('error',error)
+    });
+    };
   return (
     <>
     <div className='bodyy'>
@@ -22,7 +34,7 @@ function Profile() {
 
           <div className="form-group">
             <label htmlFor="email">Email ID:</label>
-            <input ref={interval} type="email" id="email" />
+            <input type="email" id="email" />
           </div>
 
           <div className="form-group">
@@ -37,6 +49,8 @@ function Profile() {
 
             <input type="radio" name="gender" id="female" />
             <label htmlFor="female">Female</label>
+            <input type="radio" name="gender" id="other" />
+            <label htmlFor="other">Other</label>
           </div>
 
           <div className="form-group">
@@ -73,7 +87,7 @@ function Profile() {
             <input type="file" id="resume" />
           </div>
 
-          <input className='profile-btn'  value="Submit" onClick={handleClick} />
+          <input className='profile-btn'  value="Submit" />
         </form>
       </div>
     </div>

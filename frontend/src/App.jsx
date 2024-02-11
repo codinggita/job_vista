@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { createContext, useState, useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import Navbar from './components/Navbar';
-import Main_Page from './components/Main_Page'
+import Main_Page from './components/Main_Page';
 import Footer from './components/Footer';
 import Login_Main from './components/Login_Main';
 import For_Company from './components/For_Company';
@@ -16,15 +16,19 @@ import Seekers_Apply from './components/Seekers_Apply';
 import Apply from './components/Apply';
 import Profile from './components/Profile';
 import Dashboard from './components/Dashboard';
-import New_Job from'./components/New_Job';
+import New_Job from './components/New_Job';
 import ContactUs from './components/ContactUs';
-import{useState,createContext,useContext}from'react';
 import Update_Job from './components/Update_Job';
-const LoginContext=createContext(null);
+
+// Creating the LoginContext with initial state of 'false'
+const LoginContext = createContext();
+
 function App() {
+  const [login, setLogin] = useState(false); // Initial login state is 'false'
+
   return (
 
-     <>
+     <LoginContext.Provider value={{ login, setLogin }}>
      <Navbar/>
      <Routes>
 
@@ -46,7 +50,7 @@ function App() {
     
      </Routes>
      <Footer/>
-     </>
+     </LoginContext.Provider>
   )
 }
 

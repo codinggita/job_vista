@@ -1,5 +1,6 @@
 import express from 'express';
 import New_Job from './routes/Job_Details_auth.js'
+import Register from'./routes/Company_Register_auth.js'
 const app = express();
 import cors from 'cors';
 app.use(cors());
@@ -14,6 +15,7 @@ mongoose.connect(uri)
 
 app.use(express.json());
 app.use('',New_Job);
+app.use('',Register);
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });

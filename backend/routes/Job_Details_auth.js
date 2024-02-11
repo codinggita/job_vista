@@ -38,15 +38,26 @@ router.put('/updatejob/:id',async(req,res)=>{
 //get request....
 
 router.get('/seeker_home',async(req,res)=>{
-    try{
-        const jobs=await Job_Details.find();
+    try {
+        const { salary, location, jobType, company } = req.query;
+    
+        // Prepare query object based on filters
+        const query = {};
+        if (salary) query.salary = salary;
+        if (location) query.location = location;
+        if (jobType) query.jobType = jobType;
+        if (company) query.company = company;
+    
+        // Fetch jobs from MongoDB based on filters
+        const jobs = await Job_Details.find(query);
+        
         res.json(jobs);
-    }
-    catch(error){
-        console.log('error',error);
-        res.status.json({error:'internal server error'});
-    }
-});
+      } catch (error) {
+        console.error('Error fetching jobs:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
+    });
+    
 
 //get the jobs posted on the rec dashboard
 

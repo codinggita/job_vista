@@ -9,13 +9,28 @@ import Checkbox from '@mui/material/Checkbox';
 import { getInitColorSchemeScript } from '@mui/material';
 import axios from 'axios';
 function Seekers_Home() {
-  const[Jobs,setJobs]=useState([]);
-  useEffect(()=>{
-    axios.get('http://localhost:8001/seeker_home')
-    .then((response)=>
-      setJobs(response.data))
-    .catch((error)=>console.error('error in fetching jobs:',error));
-  },[]);
+  const [jobs, setJobs] = useState([]);
+  const [filters, setFilters] = useState({});
+
+  useEffect(() => {
+    fetchJobs();
+  }, [filters]);
+
+  const fetchJobs = () => {
+    axios.get('http://localhost:8001/seeker_home', { params: filters })
+      .then(response => setJobs(response.data))
+      .catch(error => console.error('Error fetching jobs:', error));
+  };
+
+  const handleSliderChange = (event, newValue) => {
+    setFilters({ ...filters, salary: newValue });
+  };
+
+  const handleCheckboxChange = (event) => {
+    const { name, checked } = event.target;
+    setFilters({ ...filters, [name]: checked });
+  };
+
   const marks = [
     {
       value: 0,
@@ -65,30 +80,30 @@ function Seekers_Home() {
     <div>
       <h4>Location</h4>
     <FormGroup style={{margin:'2rem'}}>
-      <FormControlLabel control={<Checkbox defaultChecked />}className='color-black' label="Pune" />
-      <FormControlLabel control={<Checkbox />} className='color-black'label="Pune" />
-      <FormControlLabel control={<Checkbox />} className='color-black'label="Pune" />
+      <FormControlLabel control={<Checkbox  />}className='color-black' label="Pune" />
+      <FormControlLabel control={<Checkbox />} className='color-black'label="Noida" />
+      <FormControlLabel control={<Checkbox />} className='color-black'label="Banglore" />
     </FormGroup>
     </div>
     <div>
       <h4>Job Type</h4>
     <FormGroup  style={{margin:'2rem'}}>
-      <FormControlLabel control={<Checkbox defaultChecked />} className='color-black'label="Full Time" />
+      <FormControlLabel control={<Checkbox  />} className='color-black'label="Full Time" />
       <FormControlLabel control={<Checkbox />} className='color-black'label="Internship" />
     </FormGroup>
     </div>
     <div>
       <h4>Company</h4>
     <FormGroup style={{margin:'2rem'}}>
-      <FormControlLabel control={<Checkbox defaultChecked />}className='color-black' label="Microsoft" />
-      <FormControlLabel control={<Checkbox />}className='color-black' label="PlaySimpleGames" />
+      <FormControlLabel control={<Checkbox />}className='color-black' label="Microsoft" />
+      <FormControlLabel control={<Checkbox />}className='color-black' label="Netflix" />
       <FormControlLabel control={<Checkbox />}className='color-black' label="Google" />
     </FormGroup>
     </div>
         </div>
         </div>
       <div className='list'>
-      {Jobs.map((job, index) => (
+      {jobs.map((job, index) => (
           <Seekers_Lists
             key={index}
             heading={job.job_title}

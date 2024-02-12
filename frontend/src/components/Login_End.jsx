@@ -17,28 +17,31 @@ function Login_End(props) {
     direct = "seeker_home";
   }
   const [email, setEmail] = useState();
+  const [pass, setPass] = useState();
 
   const handleChange = (e) => {
     setEmail(e.target.value);
   };
+  const handleChangee = (e) => {
+    setPass(e.target.value);
+  };
   const navigate = useNavigate();
   const handleClick = () => {
     axios
-      .get(`http://localhost:8001/check/${direct}/${email}`)
+      .get(`http://localhost:8001/check/${direct}/${email}/${pass}`)
       .then((response) => {
         const exists = response.data.exists;
         if (exists) {
           toast.success("Logged in!", {
-            autoClose:5000,
+            autoClose:3000,
             onClose: () => {
               navigate(`/${direct}`);
             },
           });
         } else {
-            toast.warning("Registartion not completed!", {
-                autoClose:5000,
+            toast.warning("Invalid User!", {
+                autoClose:3000,
                 onClose: () => {
-                  navigate("/login_main/ forcompanies");
                 },
               });
         }
@@ -47,25 +50,6 @@ function Login_End(props) {
         console.error("Error checking email:", error);
       });
   };
-
-  //   const handleClick =(e)=> {
-  //     e.preventDefault();
-  //     axios.get(`http://localhost:8001/checkemail/${email}`)
-  //     .then((response)=>{
-  //         toast.success('Logged in!',{
-  //             onClose:()=>{
-  //                 navigate("/company_home")
-  //             },
-  //         });
-  //     })
-  //     .catch((error)=>{
-  //         toast.warning('not a user yet!',{
-  //             onClose:()=>{
-  //                 navigate("/company_home")
-  //             }
-  //         })
-  //     });
-
   return (
     <>
     <ToastContainer></ToastContainer>
@@ -92,7 +76,7 @@ function Login_End(props) {
             />
           </div>
           <div>
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Password"onChange={handleChangee} />
           </div>
           <button className="btn-register" type="submit" onClick={handleClick}>
             Login

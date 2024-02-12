@@ -4,23 +4,23 @@ import axios from 'axios';
 import { ToastContainer,toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 function Profile() {
-  const[newseeker,setNewSeeker]=useState({});
+  // const[newseeker,setNewSeeker]=useState({});
   //to update values
-  const handleChange=(e)=>{
-    const{name,value}=e.target;
-    setNewSeeker({...newseeker,[name]:value});
-  };
+  // const handleChange=(e)=>{
+  //   const{name,value}=e.target;
+  //   setNewSeeker({...newseeker,[name]:value});
+  // };
   //on submit
-  const handleSubmit=(e)=>{
-    e.preventDefault();
-    axios.post('http://localhost:8001/newseeker',newseeker)
-    .then((response)=>{
-      toast.success("Profile Updated!")
-    })
-    .catch((error)=>{
-      console.log('error',error)
-    });
-    };
+  // const handleSubmit=(e)=>{
+  //   e.preventDefault();
+  //   axios.post('http://localhost:8001/newseeker',newseeker)
+  //   .then((response)=>{
+  //     toast.success("Profile Updated!")
+  //   })
+  //   .catch((error)=>{
+  //     console.log('error',error)
+  //   });
+  //   };
   return (
     <>
     <div className='bodyy'>

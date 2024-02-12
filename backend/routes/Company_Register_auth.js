@@ -44,12 +44,12 @@ router.post('/seekername', async (req, res) => {
 
 //get req to check if user is registered....
 
-router.get('/check/:userr/:email', async (req, res) => {
+router.get('/check/:userr/:email/:pass', async (req, res) => {
     var data=req.params.userr;
     if(data=='company_home')data=Company_Register;
     else data=Seekers_Register;
     try {
-        const existingCompany = await data.findOne({ email_address: req.params.email });
+        const existingCompany = await data.findOne({ email_address: req.params.email ,password:req.params.pass});
 
         if (existingCompany) {
             return res.status(200).json({ exists: true });

@@ -5,7 +5,7 @@ import '../css/Dashboard.css'
 function Company_Dasboard(props) {
   const[deleted,setDeleted]=useState(false);
   const handleDelete=(jobid)=>{
-    axios.delete(`http://localhost:8001/company_home/delete/${jobid}`)
+    axios.delete(`https://job-vista.onrender.com/company_home/delete/${jobid}`)
     .then(()=>{
       console.log('job deleted');
       setDeleted(true);

@@ -28,7 +28,7 @@ function Login_End(props) {
   const navigate = useNavigate();
   const handleClick = () => {
     axios
-      .get(`http://localhost:8001/check/${direct}/${email}/${pass}`)
+      .get(`https://job-vista.onrender.com/check/${direct}/${email}/${pass}`)
       .then((response) => {
         const exists = response.data.exists;
         if (exists) {

@@ -25,7 +25,7 @@ function Update_Job() {
     });
   //to get the already stored details of the job
   useEffect( () => {
-    axios.get(`http://localhost:8001/company_home/updatejob/${id}`).then(response=>{
+    axios.get(`https://job-vista.onrender.com/company_home/updatejob/${id}`).then(response=>{
       //console.log(response.data);
       setNewJob(response.data);
 
@@ -44,7 +44,7 @@ function Update_Job() {
   //on form submit
   const handleSubmit=(e)=>{
     e.preventDefault();
-    axios.put(`http://localhost:8001/updatejob/${id}`,newJob)
+    axios.put(`https://job-vista.onrender.com/updatejob/${id}`,newJob)
     .then((response)=>{
       toast.success("Job Updated Successfully!",{
         autoClose: 5000,

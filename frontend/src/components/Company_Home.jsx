@@ -9,7 +9,7 @@ function Company_Home() {
 
   const[Jobs,setJobs]=useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:8001/company_home')
+    axios.get('https://job-vista.onrender.com/company_home')
     .then((response)=>
       setJobs(response.data))
     .catch((error)=>console.error('error in fetching jobs:',error));

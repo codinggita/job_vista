@@ -17,7 +17,7 @@ function Seekers_Home() {
   }, [filters]);
 
   const fetchJobs = () => {
-    axios.get('http://localhost:8001/seeker_home', { params: filters })
+    axios.get('https://job-vista.onrender.com/seeker_home', { params: filters })
       .then(response => setJobs(response.data))
       .catch(error => console.error('Error fetching jobs:', error));
   };

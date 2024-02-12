@@ -13,7 +13,7 @@ function Profile() {
   //on submit
   // const handleSubmit=(e)=>{
   //   e.preventDefault();
-  //   axios.post('http://localhost:8001/newseeker',newseeker)
+  //   axios.post('https://job-vista.onrender.com/newseeker',newseeker)
   //   .then((response)=>{
   //     toast.success("Profile Updated!")
   //   })

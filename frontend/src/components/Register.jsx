@@ -29,7 +29,7 @@ function Register(props) {
   const handleClick = async (e) => {
     e.preventDefault();
     const response = await axios
-      .post(`http://localhost:8001/${userr}`, newCompany)
+      .post(`https://job-vista.onrender.com/${userr}`, newCompany)
       .then((response) => {
         toast.success("user registered!", {
           autoClose: 5000,

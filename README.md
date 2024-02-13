@@ -3,6 +3,9 @@
 #Figma Design link:https://www.figma.com/file/S1i9faI4I7lmq6C2bT6Q8y/Job_Vista?type=design&node-id=0%3A1&mode=design&t=MUI9imCeNhGMjQ67-1
 
 #frontend deploy link:https://jobvistaaa.netlify.app/
+
+#backend link:https://job-vista.onrender.com
+#video link:https://drive.google.com/file/d/1BsgRde2NodPLILivn-UPe2rasYjz_wNV/view?usp=drive_link
 # Name: varsha
 # Registration Number: 12100888
 

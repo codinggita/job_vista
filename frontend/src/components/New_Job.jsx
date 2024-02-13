@@ -29,7 +29,7 @@ function New_Job() {
   //on form submit
   const handleSubmit=(e)=>{
     e.preventDefault();
-    axios.post('http://localhost:8001/newjob',newJob)
+    axios.post('https://job-vista.onrender.com/newjob',newJob)
     .then((response)=>{
       toast.success("Job Posted Successfully!",{
         autoClose: 5000,

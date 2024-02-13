@@ -5,6 +5,7 @@
 #frontend deploy link:https://jobvistaaa.netlify.app/
 
 #backend link:https://job-vista.onrender.com
+#video link:https://drive.google.com/file/d/1BsgRde2NodPLILivn-UPe2rasYjz_wNV/view?usp=drive_link
 # Name: varsha
 # Registration Number: 12100888
 
